@@ -1,0 +1,194 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+	<RelativeLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content" >
+	
+	    <EditText
+	        android:id="@+id/distance_value"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentRight="true"
+	        android:minEms="6"
+	        android:inputType="number"
+	        android:textSize="@dimen/text_size_normal"
+	        android:hint="@string/km" />
+	
+	    <TextView
+	        android:id="@+id/distance_label"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_toLeftOf="@id/distance_value"
+	        android:layout_alignBaseline="@id/distance_value"
+	        android:textSize="@dimen/text_size_normal"
+	        android:text="@string/distance_label" />
+	    
+	    <EditText
+	        android:id="@+id/one_way_journey_time_value"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentRight="true"
+	        android:layout_below="@id/distance_value"
+	        android:layout_alignLeft="@id/distance_value"
+	        android:inputType="numberDecimal"
+	        android:textSize="@dimen/text_size_normal"
+	        android:hint="@string/hours" />
+	
+	    <TextView
+	        android:id="@+id/one_way_journey_time_label"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_toLeftOf="@id/one_way_journey_time_value"
+	        android:layout_alignBaseline="@id/one_way_journey_time_value"
+	        android:textSize="@dimen/text_size_normal"
+	        android:text="@string/one_way_journey_time_label" />
+	    
+		<View
+		    android:id="@+id/customer_divider"
+		    android:layout_width="fill_parent"
+		    android:layout_height="1dp"
+		    android:layout_below="@id/one_way_journey_time_value"
+		    android:layout_marginTop="10dp"
+		    android:layout_marginBottom="10dp"
+		    android:background="@android:color/darker_gray"/>
+	    
+	    <EditText
+	        android:id="@+id/preparation_value"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentRight="true"
+	        android:layout_below="@id/customer_divider"
+	        android:layout_alignLeft="@id/one_way_journey_time_value"
+	        android:inputType="number"
+	        android:textSize="@dimen/text_size_normal"
+	        android:hint="@string/hours" />
+	
+	    <TextView
+	        android:id="@+id/preparation_label"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_toLeftOf="@id/preparation_value"
+	        android:layout_alignBaseline="@id/preparation_value"
+	        android:textSize="@dimen/text_size_normal"
+	        android:text="@string/preparation_label" />
+	    
+	    <EditText
+	        android:id="@+id/days_value"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentRight="true"
+	        android:layout_below="@id/preparation_value"
+	        android:layout_alignLeft="@id/preparation_value"
+	        android:inputType="numberDecimal"
+	        android:hint="@string/days"
+	        android:textSize="@dimen/text_size_normal" />
+	
+	    <TextView
+	        android:id="@+id/days_label"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_toLeftOf="@id/days_value"
+	        android:layout_alignBaseline="@id/days_value"
+	        android:textSize="@dimen/text_size_normal"
+	        android:text="@string/days_label" />
+	    
+	    <EditText
+	        android:id="@+id/working_time_value"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentRight="true"
+	        android:layout_below="@id/days_value"
+	        android:layout_alignLeft="@id/days_value"
+	        android:inputType="numberDecimal"
+	        android:textSize="@dimen/text_size_normal"
+	        android:hint="@string/hours" />
+	
+	    <TextView
+	        android:id="@+id/working_time_label"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_toLeftOf="@id/working_time_value"
+	        android:layout_alignBaseline="@id/working_time_value"
+	        android:textSize="@dimen/text_size_normal"
+	        android:text="@string/working_time_label" />
+	    
+		<View
+		    android:id="@+id/input_divider"
+		    android:layout_width="fill_parent"
+		    android:layout_height="1dp"
+		    android:layout_below="@id/working_time_value"
+		    android:layout_marginTop="10dp"
+		    android:layout_marginBottom="10dp"
+		    android:background="@android:color/darker_gray"/>
+	    
+	    <EditText
+	        android:id="@+id/residual_value"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentRight="true"
+	        android:layout_below="@id/input_divider"
+	        android:layout_alignLeft="@id/days_value"
+	        android:inputType="numberDecimal"
+	        android:hint="@string/euro"
+	        android:textSize="@dimen/text_size_normal" />
+	
+	    <TextView
+	        android:id="@+id/residual_label"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_toLeftOf="@id/residual_value"
+	        android:layout_alignBaseline="@id/residual_value"
+	        android:textSize="@dimen/text_size_normal"
+	        android:text="@string/residual_label" />
+	    
+	    <EditText
+	        android:id="@+id/nominal_fee_value"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentRight="true"
+	        android:layout_below="@id/residual_value"
+	        android:layout_alignLeft="@id/residual_value"
+	        android:inputType="numberDecimal"
+	        android:hint="@string/euro"
+	        android:textSize="@dimen/text_size_normal" />
+	
+	    <TextView
+	        android:id="@+id/nominal_fee_label"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_toLeftOf="@id/nominal_fee_value"
+	        android:layout_alignBaseline="@id/nominal_fee_value"
+	        android:textSize="@dimen/text_size_normal"
+	        android:text="@string/nominal_fee_label" />
+	    
+	    <EditText
+	        android:id="@+id/total_amount_value"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentRight="true"
+	        android:layout_below="@id/nominal_fee_value"
+	        android:layout_alignLeft="@id/nominal_fee_value"
+	        android:inputType="numberDecimal"
+	        android:hint="@string/euro"
+	        android:textSize="@dimen/text_size_normal" />
+	
+	    <TextView
+	        android:id="@+id/total_amount_label"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_toLeftOf="@id/total_amount_value"
+	        android:layout_alignBaseline="@id/total_amount_value"
+	        android:textSize="@dimen/text_size_normal"
+	        android:text="@string/total_amount_label" />
+	    
+	</RelativeLayout>
+	
+</ScrollView>
